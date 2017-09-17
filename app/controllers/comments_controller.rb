@@ -4,8 +4,10 @@ class CommentsController < ApplicationController
     @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
-      flash[:success] = 'Comment successfully posted.'
-      redirect_to :back
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js
+      end
     else
       flash[:alert] = 'Comment not posted.'
       render root_path
@@ -13,10 +15,14 @@ class CommentsController < ApplicationController
   end
   
   def destroy
-    @comment = @post.comment.find(params[:id])
-    @comment.destroy
-    flash[:success] = 'Comment deleted.'
-    redirect_to root_path
+    @comment = @post.comments.find(params[:id])
+    if @comment.user_id == current_user.id
+      @comment.delete
+      respond_to do |format|
+        format.html { redirect_to root }
+        format.js
+      end
+    end
   end
   
   private

@@ -15,6 +15,25 @@
  */
 
 @import 'bootstrap';
+@import 'font-awesome';
+
+/*@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: font-url('glyphicons-halflings-regular.eot');
+  src: font-url('glyphicons-halflings-regular.eot') format("embedded-opentype"), font-url("glyphicons-halflings-regular.woff2") format("woff2"), font-url("glyphicons-halflings-regular.woff") format("woff"), font-url("glyphicons-halflings-regular.ttf") format("truetype");
+}*/
+
+html {
+  height:100%;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.alert {
+  margin-bottom: 0px;
+}
 
 body {
   background-color: #fafafa;
@@ -31,7 +50,7 @@ body {
 /* ## POST CUSTOMISATIONS ## */
 
 .posts-wrapper {
-  padding-top: 40px;
+  padding-top: 15px;
   margin: 0 auto;
   max-width: 642px;
   width: 100%;
@@ -43,7 +62,7 @@ body {
   border-style: solid;
   border-radius: 3px;
   border-width: 1px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   .post-head {
     flex-direction: row;
     height: 64px;
@@ -117,9 +136,10 @@ body {
 .comment-like-form {
   padding-top: 24px;
   margin-top: 13px;
+  margin-bottom: 16px;
   margin-left: 24px;
   margin-right: 24px;
-  min-height: 68px;
+  min-height: 75px;
   align-items: center;
   border-top: 1px solid #EEEFEF;
   flex-direction: row;
@@ -140,4 +160,31 @@ body {
 .edit-links {
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+.registration-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: image-url('stacy-wyss-702.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+}
+
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
 }
