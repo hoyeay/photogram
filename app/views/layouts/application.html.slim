@@ -33,8 +33,10 @@ html
               a.nav-link[href="#"]
                 | Signup
     .container
-      - flash.each do |name, msg|
-        = content_tag :div, msg, class: [:alert, alert_for(name)]
+      .row.mx-auto
+        .col.text-center
+          - flash.each do |name, msg|
+            = content_tag :div, msg, class: [:alert, alert_for(name)]
     .container-fluid
       .row
         .col
