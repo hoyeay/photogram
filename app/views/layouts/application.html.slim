@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title
+      | Photogram
+    = csrf_meta_tags
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"]
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    .container-fluid
+      nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+        a.navbar-brand[href='/']
+          | Photogram
+        button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"]
+          span.navbar-toggler-icon
+        #navbarNavDropdown.collapse.navbar-collapse
+          ul.navbar-nav
+            li.nav-item.active
+              a.nav-link[href="#{root_path}"]
+                | Home 
+                span.sr-only
+                  | (current)
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link[href="#{new_post_path}"]
+                | New Post
+            li.nav-item
+              a.nav-link[href="#"]
+                | Login
+            li.nav-item
+              a.nav-link[href="#"]
+                | Signup
+    .container
+      - flash.each do |name, msg|
+        = content_tag :div, msg, class: [:alert, alert_for(name)]
+    .container-fluid
+      .row
+        .col
+          = yield
