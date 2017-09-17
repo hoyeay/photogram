@@ -10,6 +10,6 @@
         = @post.caption
         br
         small
-          = post.created_at.to_s(:my_format)
+          = @post.created_at.to_s(:my_format)
 .text-center
   = link_to 'Edit Post', edit_post_path(@post)
