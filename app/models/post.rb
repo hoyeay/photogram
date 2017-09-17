@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
+  validates :user_id, presence: true
+  belongs_to :user
   # Validation
   validates :image, presence: true
   validates :caption, length: { minimum: 3, maximum: 300 }

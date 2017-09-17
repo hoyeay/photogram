@@ -48,6 +48,9 @@ gem 'paperclip', '~> 4.2' #at the writing of this post
 # Simple Form
 gem 'simple_form', '~> 3.5'
 
+# Devise
+gem 'devise'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

@@ -1,0 +1,23 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+  a.navbar-brand[href='/']
+    | Photogram
+  button.navbar-toggler[type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"]
+    span.navbar-toggler-icon
+  #navbarNavDropdown.collapse.navbar-collapse
+    ul.navbar-nav
+      li.nav-item.active
+        a.nav-link[href="#{root_path}"]
+          | Home 
+          span.sr-only
+            | (current)
+    ul.navbar-nav.ml-auto
+      - if user_signed_in?
+        li.nav-item
+          = link_to 'New Post', new_post_path, class: 'a nav-link'
+        li.nav-item
+          = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'a nav-link'
+      - else
+        li.nav-item
+          = link_to 'Login', new_user_session_path, class: 'a nav-link'
+        li.nav-item
+          = link_to 'Signup', new_user_registration_path, class: 'a nav-link'
