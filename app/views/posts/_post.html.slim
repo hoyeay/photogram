@@ -5,7 +5,7 @@
         .post-head
           .thumb-img
           .user-name
-            = post.user
+            = post.user.user_name
           .time-ago
             = time_ago_in_words post.created_at
         .image
@@ -13,7 +13,7 @@
         .post-bottom
           .caption
             .user-name
-              = post.user
+              = post.user.user_name
             = post.caption
           .comments{id="comments_#{post.id}"}
             - if post.comments
