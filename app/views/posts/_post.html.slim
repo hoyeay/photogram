@@ -13,7 +13,7 @@
         .post-bottom
           .caption
             .user-name
-              = post.user.user_name
+              = post.user
             = post.caption
           .comments{id="comments_#{post.id}"}
             - if post.comments
