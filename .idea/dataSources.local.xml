@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails photogram: development" uuid="c1af6ac5-d984-4c87-b7e3-47c71da46865">
+      <database-info product="PostgreSQL" version="9.6.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <introspection-schemas>photogram_development:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails photogram: production" uuid="4a574b37-c125-4ae6-9668-f22962f31be2">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>photogram</user-name>
+    </data-source>
+    <data-source name="Rails photogram: test" uuid="015d88eb-a65f-424a-9134-571c409c4bbf">
+      <database-info product="PostgreSQL" version="9.6.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <introspection-schemas>photogram_test:public</introspection-schemas>
+    </data-source>
+  </component>
+</project>

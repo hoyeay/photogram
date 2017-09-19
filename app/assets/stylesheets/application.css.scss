@@ -23,9 +23,6 @@
   src: font-url('glyphicons-halflings-regular.eot') format("embedded-opentype"), font-url("glyphicons-halflings-regular.woff2") format("woff2"), font-url("glyphicons-halflings-regular.woff") format("woff"), font-url("glyphicons-halflings-regular.ttf") format("truetype");
 }*/
 
-html {
-  height:100%;
-}
 
 .help-block {
   color: red;
@@ -33,10 +30,6 @@ html {
 
 .navbar {
   margin-bottom: 0;
-}
-
-.alert {
-  margin-bottom: 0px;
 }
 
 body {
@@ -48,7 +41,8 @@ body {
 .alert {
   max-width: 50%;
   margin:20px auto;
-  margin-bottom:10px;
+  margin-bottom:1px;
+  z-index: 1;
 }
 
 /* ## POST CUSTOMISATIONS ## */
@@ -96,6 +90,8 @@ body {
 .post-bottom {
   .user-name, .comment-content {
     display: inline;
+    -ms-word-wrap:break-word;
+    word-wrap:break-word;
   }
   .caption {
     margin-bottom: 7px;
@@ -166,7 +162,7 @@ body {
   margin-bottom: 40px;
 }
 
-.registration-bg {
+.bg-signup {
   padding-top: 4em;
   min-height: 100%;
   min-width:1024px;
@@ -182,10 +178,36 @@ body {
   background-size: cover;
 }
 
+.bg-login {
+  padding-top: 4em;
+  min-height: 100%;
+  min-width:1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  z-index: -1;
+  top:0;
+  left:0;
+  background-image: image-url('octavio-fossatti-37556.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .log-in{
   margin-left: auto;
   margin-right: auto;
   text-align:center;
   border: none;
   padding-top:4em;
+}
+
+#image-preview {
+  margin: 0px auto;
+}
+
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
 }

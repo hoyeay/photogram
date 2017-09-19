@@ -1,7 +1,7 @@
-.registration-bg
+.bg-signup
 .container
   .row.justify-content-center
-    .col-xl-4.col-lg-4.col-md-6.col-sm-9.col
+    .col-md-4
       .log-in
         .card
           .card-body
@@ -30,4 +30,4 @@
                       placeholder: 'Confirm Password',
                       input_html: { class: 'form-control form-control-lg' }          
               = f.button :submit, "Signup", class: 'btn btn-lg btn-block btn-dark'
-= render "devise/shared/links"
+              = render "devise/shared/links"

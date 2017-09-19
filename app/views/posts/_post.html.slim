@@ -1,4 +1,4 @@
-.posts-wrapper.mx-auto
+.posts-wrapper
   .row
     .col
       .post
@@ -27,4 +27,5 @@
               = f.text_field :content, 
                       placeholder: 'Add a comment...', 
                       class: 'comment_content', 
+                      label: false,
                       id: "comment_content_#{post.id}"

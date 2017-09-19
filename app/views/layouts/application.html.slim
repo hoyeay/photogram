@@ -10,12 +10,12 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = render 'layouts/navbar'
-    .container
+    .container-fluid
       .row.mx-auto
         .col.text-center
           - flash.each do |name, msg|
             = content_tag :div, msg, class: [:alert, alert_for(name)]
     .container-fluid
-      .row.mx-auto
-        .col.text-center
+      .row
+        .col
           = yield
