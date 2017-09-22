@@ -146,6 +146,12 @@ body {
   justify-content: center;
 }
 
+.like-button {
+  a:hover {
+    text-decoration: none;
+  }
+}
+
 /* ## Wrapper and styling for the new and edit views ## */
 
 .form-wrapper {
@@ -248,7 +254,8 @@ body {
 }
 
 #user_avatar {
-  margin: 20px auto;
+  padding: 1em;
+  margin: 0px auto;
 }
 
 .profile-header {
@@ -277,4 +284,19 @@ body {
 
 .profile-bio {
   margin-top: 20px;
+}
+
+.likes {
+  margin-top: 4px;
+  margin-bottom: 7px;
+}
+
+.like {
+  text-decoration: none;
+  color: red;
+}
+
+.like-button a:hover, a:focus {
+  text-decoration: none;
+  color: red;
 }
