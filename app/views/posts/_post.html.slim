@@ -5,7 +5,7 @@
         .post-head
           .thumb-img
           .user-name
-            = post.user.user_name
+            = link_to post.user.user_name, profile_path(post.user.user_name)
           .time-ago
             = time_ago_in_words post.created_at
         .image
@@ -13,11 +13,21 @@
         .post-bottom
           .caption
             .user-name
-              = post.user.user_name
+              = link_to post.user.user_name, profile_path(post.user.user_name)
             = post.caption
           .comments{id="comments_#{post.id}"}
-            - if post.comments
-              = render post.comments, post: post
+            - if post.comments.any?
+              = render post.comments.first(5), post:post
+              - unless post.comments.count <= 5
+                .paginator{id="#comments-paginator-#{post.id}"}
+                  = link_to "view all #{post.comments.count} comments",
+                          post_comments_path(post), 
+                          remote: true, 
+                          class: 'more-comments',
+                          id: "more_comments_#{post.id}",
+                          data: {post_id: "#{post.id}"},
+                          type: 'html', 
+                          value: "#{post.comments.count}"
         .comment-like-form.row
           .like-button.col-sm-1
             span
