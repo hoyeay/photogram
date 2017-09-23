@@ -32,10 +32,7 @@
                           value: "#{post.comments.count}"
         .comment-like-form.row
           .like-button.col-sm-1
-            = link_to '', like_post_path(post.id), 
-                    remote: true, 
-                    id: "like_#{post.id}", 
-                    class: "like fa #{liked_post post}"
+            = liked_post post
           .comment-form.col-sm-11
             = form_for([post, post.comments.build], remote: true) do |f|
               = f.text_field :content, 
