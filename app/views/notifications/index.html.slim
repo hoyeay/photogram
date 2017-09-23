@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-md-3
+    .col-md-6.text-center
+      .ul.notification-index-list.list-group
+        h1.text-center
+          | Your Notifications
+        = render @notifications, selector: 'long'
+- if current_user.notifications.length > 10
+  .text-center#paginator
+    = link_to_next_page @notifications, 'LOAD MORE', remote: true, id: 'load_more'

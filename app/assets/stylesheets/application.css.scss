@@ -32,6 +32,24 @@
   margin-bottom: 0;
 }
 
+.notification-dropdown {
+  margin-top: 10px;
+  button {
+    border: none;
+  }
+}
+
+.notification-index-list {
+  margin-top: 5em;
+  list-style: none;
+  li {
+    margin-top: .25em;
+    margin-bottom: .25em;
+    background-color: white;
+    padding: .15em;
+  }
+}
+
 body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -225,6 +243,11 @@ body {
       color: #A5A7AA;
     }
   }
+}
+
+.comment-submit-button {
+  position: absolute;
+  left: 0px;
 }
 
 #paginator {

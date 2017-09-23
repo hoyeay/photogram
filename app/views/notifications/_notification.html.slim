@@ -1,0 +1,15 @@
+- if selector == 'long'
+  li.list-group-item
+    ul.list-inline.list-unstyled.text-center
+      li.notification-item
+        - unless notification.read
+          span.glyphicon.glyphicon-asterisk
+      /li.notification-item.notification-image
+      /  = notification_avatar(notification.notified_by)
+      li.notification-item
+        = link_to "#{notification.notified_by.user_name} left you a #{notification.notice_type}", link_through_path(notification)
+        |  
+        = time_ago_in_words(notification.created_at) + " ago"
+- elsif selector == 'short'
+  li
+    = link_to "#{notification.notified_by.username} left you a #{notification.notice_type}", link_through_path(notification)

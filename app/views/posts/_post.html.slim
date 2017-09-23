@@ -31,12 +31,16 @@
                           type: 'html', 
                           value: "#{post.comments.count}"
         .comment-like-form.row
-          .like-button.col-sm-1
+          .like-button.col-2
             = liked_post post
-          .comment-form.col-sm-11
-            = form_for([post, post.comments.build], remote: true) do |f|
-              = f.text_field :content, 
-                      placeholder: 'Add a comment...', 
-                      class: 'comment_content', 
-                      label: false,
-                      id: "comment_content_#{post.id}"
+          .comment-form.col-10
+            = form_for([post, post.comments.new], remote: true) do |f|
+              .row
+                .col-9
+                  = f.text_field :content, 
+                          placeholder: 'Add a comment...', 
+                          class: 'comment_content', 
+                          label: false,
+                          id: "comment_content_#{post.id}"
+                .col-3
+                  = f.submit 'Submit', class: 'btn btn-sm'
